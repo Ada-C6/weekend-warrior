@@ -13,7 +13,7 @@ class TwelveDaysTest < Minitest::Test
     # gifts's parameter is a NUMBER
     # from .first method call, Guess .gifts(0) returns an ARRAY
     assert_equal(l, g)
-    # l = g, so the return value of method gifts should be a ARRAY OF STRING
+    # l = g, so the return value of method gifts should be a ARRAY OF STRING 
   end
 
 
