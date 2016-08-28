@@ -17,7 +17,7 @@ class Xmas
     @first_gift = "a partridge in a pear tree"
     DAY_NAMES = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"]
 
-  def self.gifts(day_number)
+  def self.gifts(day_number) #.reserve can also be used here
     gifts_of_day = []
     if day_number == 0
       gifts_of_day << @first_gift
