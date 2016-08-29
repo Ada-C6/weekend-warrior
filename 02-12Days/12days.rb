@@ -32,7 +32,7 @@ class Xmas
   end
 
   def self.verse(day_number)
-    gifts_text = @gifts(day_number).join("\n")
+    gifts_text = gifts(day_number).join("\n")
     # use .join method instead of iteration
     # gifts_text = ""
     # gifts(day_number).each do |gift|
