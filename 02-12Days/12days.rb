@@ -17,13 +17,13 @@ class Xmas
     @first_gift = "a partridge in a pear tree"
     DAY_NAMES = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"]
 
-  def self.gifts(day_number) #.reserve can also be used here
+  def self.gifts(day_number)
     gifts_of_day = []
     if day_number == 0
       gifts_of_day << @first_gift
     else
       (day_number + 1).times do |current_day|
-        gifts_of_day << @gifts[day_number - current_day]
+        gifts_of_day << @gifts[day_number - current_day] # .slice.reverse can used for same effect
       end
     end
     return gifts_of_day
