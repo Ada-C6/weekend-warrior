@@ -22,20 +22,23 @@ class Xmas
     if day_number == 0
       gifts_of_day << @first_gift
     else
-      (day_number + 1).times do |current_day|
-        gifts_of_day << @gifts[day_number - current_day]
-        #.slice.reverse can be used here for same effect
-      end
+      gifts_of_day = @gifts.slice(0, day_number + 1).reverse
+      # use .slice & .reverse instead of iteration
+      # (day_number + 1).times do |current_day|
+      #   gifts_of_day << @gifts[day_number - current_day]
+      # end
     end
     return gifts_of_day
   end
 
   def self.verse(day_number)
-    gifts_text = ""
-    gifts(day_number).each do |gift|
-      gifts_text += ("\n" + gift)
-    end
-    return "On the #{DAY_NAMES[day_number]} day of Christmas my true love gave to me" + gifts_text
+    gifts_text = gifts(day_number).join("\n")
+    # use .join method instead of iteration
+    # gifts_text = ""
+    # gifts(day_number).each do |gift|
+    #   gifts_text += ("\n" + gift)
+    # end
+    return "On the #{DAY_NAMES[day_number]} day of Christmas my true love gave to me\n" + gifts_text
   end
 
   def self.sing
