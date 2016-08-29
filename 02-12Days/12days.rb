@@ -23,7 +23,8 @@ class Xmas
       gifts_of_day << @first_gift
     else
       (day_number + 1).times do |current_day|
-        gifts_of_day << @gifts[day_number - current_day] # .slice.reverse can used for same effect
+        gifts_of_day << @gifts[day_number - current_day]
+        #.slice.reverse can be used here for same effect
       end
     end
     return gifts_of_day
