@@ -4,6 +4,7 @@ require_relative 'hamming'
 
 class HammingTest < Minitest::Test
   def test_identical_strands
+    skip
     assert_equal 0, Hamming.compute('A', 'A')
   end
 
@@ -58,17 +59,19 @@ class HammingTest < Minitest::Test
   end
 
   def test_empty_strands
-    skip
+
     assert_equal 0, Hamming.compute('', '')
+
   end
 
   def test_disallow_first_strand_longer
-    skip
+    
     assert_raises(ArgumentError) { Hamming.compute('AATG', 'AAA') }
+
   end
 
   def test_disallow_second_strand_longer
-    skip
+  
     assert_raises(ArgumentError) { Hamming.compute('ATA', 'AGTG') }
   end
 end
