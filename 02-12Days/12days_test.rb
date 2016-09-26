@@ -9,11 +9,11 @@ class TwelveDaysTest < Minitest::Test
     g = Xmas.gifts(0).first
     # Xmas: class or a constant with an object
     # if Xmas is a class, then .gifts is a CLASS method
-    # if Xmas is a constant with an object, then .gift is a instance method
+    # (if Xmas is a constant with an object, then .gift is a instance method) --> not common
     # gifts's parameter is a NUMBER
     # from .first method call, Guess .gifts(0) returns an ARRAY
     assert_equal(l, g)
-    # l = g, so the return value of method gifts should be a ARRAY OF STRING 
+    # l = g, so the return value of method gifts should be a ARRAY OF STRING
   end
 
 
