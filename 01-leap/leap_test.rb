@@ -18,31 +18,31 @@ class YearTest < Minitest::Test
   end
 
   def test_non_leap_year
-    skip
+    #skip
     refute leap_year?(1997), 'No, 1997 is not a leap year'
   end
 
   def test_non_leap_even_year
-    skip
+    #skip
     refute leap_year?(1998), 'No, 1998 is not a leap year'
   end
 
   def test_century
-    skip
+    #skip
     refute leap_year?(1900), 'No, 1900 is not a leap year'
   end
 
   def test_fourth_century
-    skip
+    #skip
     assert leap_year?(2400), 'Yes, 2400 is a leap year'
   end
 
   def test_y2k
-    skip
+    #skip
     assert leap_year?(2000), 'Yes, 2000 is a leap year'
   end
   def test_long_long_ago
-    skip
+    #skip
     assert leap_year?(8), 'Yes, 8 is a leap year'
   end
 end
